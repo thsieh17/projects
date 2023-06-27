@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Author: Tung-Ju Hsieh
+-->
+
+<head>
+    <title>COMP2132 | Project | Dice Game</title>
+    <meta charset="UTF-8">
+    <!-- responsive content for mobile device-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- responsive content for mobile device-->
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- google fonts -->
+    <!-- icon font -->
+    <script src="https://kit.fontawesome.com/90f38db5d2.js" crossorigin="anonymous"></script>
+    <!-- icon font -->
+    <!-- css -->
+    <link href="./css/style.css" rel="stylesheet" />
+    <!-- css -->
+    <!-- java script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js" defer="defer"></script>
+    <script src="./scripts/project-functions.js" defer="defer"></script>
+    <script src="./scripts/project.js" defer="defer"></script>
+    <!-- java script -->
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <header>
+            <h1>Dice Game</h1>
+        </header>
+
+        <main>
+            <nav>
+                <button class="btn-rolldice">Roll Dice</button>
+                <button class="btn-restart">New game</button>
+                <button class="btn-rule">Rule</button>
+            </nav>
+            <div id="rule">
+                <button id="btn-close">✕</button>
+                <ul>
+                    <li>
+                        If any of the players two dice comes up as a 1 then the score for that round for the player
+                        is 0. eg: if the player rolls a 6 and 1, they get a score of 0
+                    </li>
+                    <li>
+                        If the player rolls a pair of the same numbers then the players score is the total of the
+                        two dice times 2. eg: if he player rolls 5 and 5, they get a score of (5+5)*2=20
+                    </li>
+                    <li>
+                        If the player rolls any other combination of dice other than the ones mentioned above
+                        then the players score is the total value of the two dice, eg: player rolls a 3 and 2, player
+                        gets a score of 3+2=5
+                    </li>
+                </ul>
+            </div>
+            <div id="result"></div>
+            <div id="main-wrapper">
+
+                <section id="player-side">
+                    <div>
+                        <img src="images/background01.png" alt="Background">
+                        <div>
+                            <img src="images/player.png" alt="Player" id="player-img">
+                            <div>
+                                <h2>Player</h2>
+                                <p id="player-score">Score: 0</p>
+                                <p id="player-total-score">Total Score: 0</p>
+                            </div>
+                            <div id="player-dice"></div>
+                        </div>
+                    </div>
+                </section>
+                <section id="menu">
+                    <div>
+                        <img src="images/background02.png" alt="Background">
+                        <div id="panel">
+                            <button class="btn-rolldice">Roll Dice</button>
+                            <button class="btn-restart">New Game</button>
+                            <button class="btn-rule">Rule</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="computer-side">
+                    <div>
+                        <img src="images/background03.png" alt="Background">
+                        <div>
+                            <img src="images/computer.png" alt="Computer" id="computer-img">
+                            <div>
+                                <h2>Computer</h2>
+                                <p id="computer-score">Score: 0</p>
+                                <p id="computer-total-score">Total Score: 0</p>
+                            </div>
+                            <div id="computer-dice"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div>
+                COMP2132 Copyleft &#169; 2023
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+html {
+  /*-- ensure all page elements use box-sizing: border-box; --*/
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header {
+  background-color: #225E12;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  color: #ED1818;
+  font-size: 1.5rem;
+}
+
+body {
+  background-color: #000000;
+  /*-- remove gaps at edge of viewport --*/
+  margin: 0px;
+  /*-- google fonts --*/
+  font-family: "Press Start 2P", cursive;
+  color: #FFFEF6;
+}
+body > div {
+  display: flex;
+  flex-flow: column wrap;
+  /*-- stop page content from getting too wide --*/
+  max-width: 356px;
+  /*-- center the page horizontally --*/
+  margin: auto;
+  /*--
+  flex-direction: column; --*/
+  /*-- expand the page height to at least be as tall as the viewport --*/
+  min-height: 100vh;
+}
+
+h2 {
+  color: #FFDF00;
+  font-size: 1.1rem;
+  margin-left: 0px;
+}
+
+main {
+  background-color: #000084;
+  flex: 1;
+  padding: 10px;
+  position: relative;
+}
+main nav button {
+  all: unset;
+  font-size: 0.6rem;
+  margin-bottom: 5px;
+  cursor: pointer;
+  height: 20px;
+  padding: 5px;
+}
+main nav button:hover {
+  background-color: #15E40E;
+}
+main > div {
+  border: 8px solid #AA6600;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+section div > img {
+  width: 100%;
+  height: auto;
+}
+section > div {
+  position: relative;
+}
+section > div > div {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 6px;
+  position: absolute;
+  bottom: 6px;
+  border: 2px solid #FFFEF6;
+  background-color: rgba(0, 0, 132, 0.5);
+}
+section > div > div > div:first-of-type {
+  min-width: 150px;
+}
+
+#rule {
+  width: 314px;
+  position: absolute;
+  top: 52px;
+  left: 18px;
+  z-index: 2;
+  border: 8px solid #FFFEF6;
+  background-color: rgba(0, 0, 132, 0.8);
+  padding: 10px;
+  font-size: 0.6rem;
+  line-height: 20px;
+}
+#rule button {
+  all: unset;
+  cursor: pointer;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.8rem;
+  background-color: #ED1818;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
+#rule ul {
+  list-style: none;
+  list-style-image: url(../images/arrow.png);
+}
+
+#result {
+  width: 314px;
+  position: absolute;
+  top: 52px;
+  left: 18px;
+  z-index: 2;
+  border: 8px solid #FFFEF6;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+}
+#result > p {
+  color: #ED1818;
+}
+#result > img {
+  width: 50%;
+  height: auto;
+}
+
+#player-img,
+#computer-img {
+  min-width: 99px;
+  width: 100%;
+  height: auto;
+}
+
+#player-dice,
+#computer-dice {
+  min-width: 49px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+#player-dice img,
+#computer-dice img {
+  width: 49px;
+  height: 49px;
+}
+
+#menu {
+  display: none;
+}
+
+#panel {
+  width: 250px;
+  height: 156px;
+  display: flex;
+  flex-flow: column wrap;
+  margin-left: 34px;
+}
+#panel button {
+  all: unset;
+  cursor: pointer;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.8rem;
+  height: 30px;
+  padding-left: 60px;
+  margin-top: 10px;
+}
+#panel button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #FFDF00;
+}
+
+footer {
+  background-color: #225E12;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+@media (min-width: 664px) {
+  body > div {
+    max-width: 664px;
+  }
+  main > div {
+    flex-flow: row nowrap;
+  }
+  #rule {
+    width: 628px;
+  }
+  #result {
+    height: 315px;
+    left: 175px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-around;
+  }
+}
+@media (min-width: 978px) {
+  body > div {
+    max-width: 996px;
+  }
+  nav {
+    display: none;
+  }
+  #menu {
+    display: block;
+  }
+  #rule {
+    top: 18px;
+    left: 184px;
+  }
+  #result {
+    top: 18px;
+    left: 341px;
+  }
+}

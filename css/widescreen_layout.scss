@@ -1,0 +1,45 @@
+@media (min-width:664px) {
+    body>div {
+        max-width: 664px;
+    }
+
+    main>div {
+        flex-flow: row nowrap;
+    }
+
+    #rule {
+        width: 628px;
+    }
+
+    #result {
+        height: 315px;
+        left: 175px;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: space-around;
+    }
+}
+
+@media(min-width:978px) {
+    body>div {
+        max-width: 996px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    #rule {
+        top: 18px;
+        left: 184px;
+    }
+
+    #result {
+        top: 18px;
+        left: 341px;
+    }
+}

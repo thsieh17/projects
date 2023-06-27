@@ -1,0 +1,6 @@
+@mixin my-button($condition, $cursor-type, $font-family, $font-size) {
+    all: $condition;
+    cursor: $cursor-type;
+    font-family: $font-family;
+    font-size: $font-size;
+}
